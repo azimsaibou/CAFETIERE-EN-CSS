@@ -180,22 +180,22 @@
 .vapeur1{
     left: /* left de tasse + la position */ 100px;
     bottom: /* height de tass + une position */ 55px;
-    animation: faireMonterVapeur1 3s 2s linear infinite;
+    animation: faireMonterVapeur1 3s 7s linear infinite;
 }
 .vapeur2{
     bottom: 55px;
     left: 120px;
-    animation: faireMonterVapeur1 3s 4s linear infinite;
+    animation: faireMonterVapeur1 3s 9s linear infinite;
 }
 .vapeur3{
     bottom: 55px;
     left: 140px;
-    animation: faireMonterVapeur1 3s linear infinite;
+    animation: faireMonterVapeur1 3s 8s linear infinite;
 }
 .vapeur4{
     bottom: 55px;
     left: 155px;
-    animation: faireMonterVapeur1 3s 5s linear infinite;
+    animation: faireMonterVapeur1 3s 10s linear infinite;
 }
 @keyframes faireMonterVapeur1{
     0%,20%{
