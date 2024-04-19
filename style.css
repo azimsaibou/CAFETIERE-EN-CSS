@@ -43,3 +43,172 @@
     left: calc(50% - 8px / 2);
     bottom: -8px;
 }
+.ajusteur{
+    height: 50px;
+    width: 50px;
+    background-color: #9acfc5;
+    position: absolute;
+    left: calc(50% - 50px / 2);
+    top: calc(50% - 50px / 2);
+    border: 5px solid #43beae;
+    border-radius: 50%;
+}
+.detail{
+    height: 20px;
+    width: 8px;
+    background-color: #9b9091;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    box-shadow: -12px 0 0 #9b9091, calc(-12px * 2) 0 0 #9b9091;
+}
+.centre-du-cafetiere{
+    height: 160px;
+    width: 90%;
+    background-color: #bcb0af;
+    position: absolute;
+    left: calc(50% - 90% / 2);
+    top: /* tete-du-cafetiere */ 80px;
+}
+.centre-du-cafetiere::before{
+    content: "";
+    height: 100px;
+    width: 90%;
+    background-color: #776f6e;
+    position: absolute;
+    left: calc(50% - 90% / 2);
+    bottom: 0;
+    border-radius: 15px 15px 0 0;
+}
+.serveur{
+    height: 20px;
+    width: 60px;
+    background-color: #231f20;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 60px / 2)
+}
+.serveur::before{
+    content: "";
+    height: 20px;
+    width: 50px;
+    background-color: #231f20;
+    position: absolute;
+    left: calc(50% - 50px / 2);
+    bottom: /* - hauteur de before */ -20px;
+    border-radius: 0 0 50% 50%;
+}
+.serveur::after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #231f20;
+    position: absolute;
+    left: calc(50% - 10px / 2);
+    bottom: /* - hauteur de after - hauteur de before */ -30px;
+}
+.bras{
+    height: 20px;
+    width: 70px;
+    background-color: #231f20;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+}
+.bras::after{
+    content: "";
+    height: 5px;
+    width: /* moitie du centre - moitie de before - bras - right du bras */ /* 270px/2 - 50px/2 - 70px - 25px */ 15px;
+    background-color: #9e9495;
+    position: absolute;
+    top: calc(50% - 5px / 2);
+    left: -15px;
+}
+.liquide{
+    height: 63px;
+    width: 6px;
+    background-color: #74372b;
+    position: absolute;
+    left: calc(50% - 6px / 2);
+    top: /* serveur + serveur before + serveur after */ 50px;
+    animation: ecoulerLiquide 5s linear infinite;
+    opacity: 0;
+}
+@keyframes ecoulerLiquide{
+    0%,20%{
+        opacity: 0.2;
+        height: 0px;
+    }40%{
+        opacity: 0.4;
+        height: 40px;
+    }60%,90%{
+        opacity: 1;
+        height: 63px;
+    }100%{
+        opacity: 0;
+        height: 60px;
+    }
+}
+.tasse{
+    height: 47px;
+    width: 80px;
+    background-color: #fff;
+    position: absolute;
+    left: calc(50% - 80px / 2);
+    bottom: 0;
+    border-radius: 0 0 50px 50px / 0 0 70px 70px;
+}
+.tasse::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    /* sans background-color = background-color tranparent */
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: absolute;
+    top: 5px;
+    right: -10px;
+}
+.vapeur{
+    height: 20px;
+    width: 8px;
+    background-color: #b3aeae;
+    position: absolute;
+    border-radius: 15px;
+    opacity: 0;
+}
+.vapeur1{
+    left: /* left de tasse + la position */ 100px;
+    bottom: /* height de tass + une position */ 55px;
+    animation: faireMonterVapeur1 3s 2s linear infinite;
+}
+.vapeur2{
+    bottom: 55px;
+    left: 120px;
+    animation: faireMonterVapeur1 3s 4s linear infinite;
+}
+.vapeur3{
+    bottom: 55px;
+    left: 140px;
+    animation: faireMonterVapeur1 3s linear infinite;
+}
+.vapeur4{
+    bottom: 55px;
+    left: 155px;
+    animation: faireMonterVapeur1 3s 5s linear infinite;
+}
+@keyframes faireMonterVapeur1{
+    0%,20%{
+        opacity: 0;
+        bottom: 47px;
+    }60%{
+        opacity: 0.4;
+        bottom: calc(47px + 40px);
+    }80%{
+        opacity: 0.3;
+        bottom: calc(47px + 50px);
+    }100%{
+        opacity: 0;
+        bottom: calc(47px + 50px);
+    }
+}
