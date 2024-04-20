@@ -212,3 +212,23 @@
         bottom: calc(47px + 50px);
     }
 }
+
+.pied-du-cafetiere{
+    height: 15px;
+    width: 95%;
+    background-color: #41bdad;
+    position: absolute;
+    left: calc(50% - 95% / 2);
+    bottom: /* conteneur - pied - centre - tete */ calc(280px - 80px - 160px - 15px);
+    border-radius: 15px;
+}
+.pied-du-cafetiere::after{
+    content: "";
+    height: 26px;
+    width: 106%;
+    background-color: #000;
+    position: absolute;
+    left: calc(50% - 106% / 2);
+    bottom: -26px;
+    border-radius: 10px;
+}
